@@ -17,8 +17,10 @@ def derivative(f, x):
     h = 1e-5
     return (f(x + h) - f(x)) / h
 
+
 def second_derivative(f, x):
     return derivative(lambda z: derivative(f, z), x)
+
 
 def optimize(x0, f):
     tolerance = 1e-6
@@ -32,5 +34,3 @@ def optimize(x0, f):
             break
         x = x_new
     return x
-
-# %%
